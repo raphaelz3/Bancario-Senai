@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BancoNoPay/1.0.0": {
+        "runtime": {
+          "BancoNoPay.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BancoNoPay/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

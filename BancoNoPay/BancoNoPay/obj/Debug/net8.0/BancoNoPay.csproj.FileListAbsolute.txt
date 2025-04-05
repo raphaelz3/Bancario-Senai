@@ -1,0 +1,14 @@
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\bin\Debug\net8.0\BancoNoPay.exe
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\bin\Debug\net8.0\BancoNoPay.deps.json
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\bin\Debug\net8.0\BancoNoPay.runtimeconfig.json
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\bin\Debug\net8.0\BancoNoPay.dll
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\bin\Debug\net8.0\BancoNoPay.pdb
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.AssemblyInfoInputs.cache
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.AssemblyInfo.cs
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.csproj.CoreCompileInputs.cache
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.dll
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\refint\BancoNoPay.dll
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.pdb
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.genruntimeconfig.cache
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\ref\BancoNoPay.dll
