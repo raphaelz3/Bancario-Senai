@@ -12,3 +12,4 @@ C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\re
 C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.pdb
 C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.genruntimeconfig.cache
 C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\ref\BancoNoPay.dll
+C:\Users\FIC\Desktop\AulasCSharp\Banco\BancoNoPay\BancoNoPay\obj\Debug\net8.0\BancoNoPay.sourcelink.json

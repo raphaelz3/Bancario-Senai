@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BancoNoPay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+863995c6685914cf50b1a0acc30061be425e5567")]
 [assembly: System.Reflection.AssemblyProductAttribute("BancoNoPay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BancoNoPay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
