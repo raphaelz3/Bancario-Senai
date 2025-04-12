@@ -1,7 +1,10 @@
-﻿interface IContaBancaria
+﻿using System.ComponentModel.Design;
+using System.Security.Cryptography.X509Certificates;
+
+interface IContaBancaria
 {
     void Depositar(decimal valor);
-    void Sacar(decimal valor);
+    bool Sacar(decimal valor);
     void MostrarSaldo();
 }
 
@@ -25,14 +28,18 @@ class ContaBancaria : IContaBancaria
         Console.WriteLine($"Deposito de R$ {valor:F2} realizado.\nSaldo atual: {saldo:F2}");
     }
 
-    public virtual void Sacar(decimal valor)
+    public virtual bool Sacar(decimal valor)
     {
-        if (valor >saldo)
+        if (valor > saldo)
+        {
             Console.WriteLine($"Saldo unsuficiente.");
+            return false;
+        }
         else
         {
             saldo -= valor;
             Console.WriteLine($"Saque de R$ {valor} realizado. \nSaldo atual R$ {saldo:F2}");
+            return true;        
         }
     }
 
@@ -57,14 +64,17 @@ class ContaPoupanca : ContaBancaria
 class ContaCorrente : ContaBancaria
 {
     public ContaCorrente(string titular) : base(titular) { }
-    public override void Sacar(decimal valor)
+    public override bool Sacar(decimal valor)
     {
         decimal taxa = 2.50m;
         if (valor + taxa > 0)
         {
-            base.Sacar(valor + taxa);
-            Console.WriteLine($"Taxa de saque R$ {taxa} aplicada");
+            bool sacou = base.Sacar(valor + taxa);
+            if (sacou)
+                Console.WriteLine($"Taxa de saque R$ {taxa} aplicada");
+            return sacou;
         }
+        return false;
     } 
 }
 
@@ -72,6 +82,10 @@ class Banco
 {
     private List<ContaBancaria> contas = new List<ContaBancaria>();
 
+    private ContaBancaria BuscarConta(int numeroContaDigitado)
+    {
+        return contas.Find(conta => conta.NumeroConta == numeroContaDigitado);
+    }
     public void CriarConta()
     {
         Console.WriteLine("Digital o nome da titular: ");
@@ -93,11 +107,10 @@ Escolha o tipo de conta
     public void Depositar()
     {
         Console.WriteLine("Digite o numero da conta");
-        Console.WriteLine("> ");
+        Console.Write("> ");
         int numeroContaDigitado = int.Parse(Console.ReadLine());
 
-        ContaBancaria contaBuscada = contas.Find(conta => conta.NumeroConta == numeroContaDigitado);
-
+        ContaBancaria contaBuscada = BuscarConta(numeroContaDigitado);
         if (contaBuscada != null)
         {
             Console.WriteLine("Digite o valor do deposito");
@@ -109,6 +122,37 @@ Escolha o tipo de conta
         {
             Console.WriteLine("Conta nao encontrda!");
         }
+    }
+    public void Sacar()
+    {
+        Console.WriteLine("Digite o numero o conta");
+        Console.Write("> ");
+        int numeroContaDigitado = int.Parse(Console.ReadLine());
+
+        ContaBancaria contaBuscada = BuscarConta(numeroContaDigitado);
+
+        if(contaBuscada != null)
+        {
+            Console.WriteLine("Digite o valor do saque");
+            Console.Write("> ");
+            decimal valor = decimal.Parse(Console.ReadLine());
+            contaBuscada.Sacar(valor);
+        }
+        else
+        {
+            Console.WriteLine("COnta nao encontrada");
+        }
+
+            
+    }
+
+    public void Listar()
+    {
+        if(contas.Count > 0)
+            foreach (var conta in contas)
+                conta.MostrarSaldo();                           
+        else
+            Console.WriteLine("Nenhuma conta cadastrada");
     }
 
     class Program
@@ -138,6 +182,9 @@ Escolha o tipo de conta
                         break;
                     case 2:
                         banco.Depositar();
+                        break;
+                    case 3:
+                        banco.Sacar();
                         break;
                     default:
                         Console.WriteLine("Opcao individual");
